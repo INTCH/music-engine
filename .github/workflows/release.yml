@@ -28,4 +28,4 @@ jobs:
       - name: create the GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release create "${GITHUB_REF_NAME}" dist/* --title "${GITHUB_REF_NAME}" --generate-notes --verify-tag
+        run: gh release create "${GITHUB_REF_NAME}" dist/* --title "${GITHUB_REF_NAME}" --verify-tag --notes "Source distribution and wheel. Install with pip install musicengine-*.whl, or clone the repo; see the README and AGENTS.md."
