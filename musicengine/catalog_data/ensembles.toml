@@ -1,0 +1,18 @@
+# Sections stacked from one recorded performer (engine.Ensemble): each voice is a different
+# recording of the source, entering a few ms apart, slightly detuned, spread in stereo.
+
+[[instrument]]
+name = "choir_male"
+rule = "ensemble"
+of = "legato-vocal-tutorial/01-no-legato-polyphonic-only-no-vibrato-a"
+library = "legato_vocal_tutorial"   # Karoryfer Hadzi-Fia "a" vowel, one male singer, CC0
+family = "voice"
+tags = ["choir", "recorded", "aah", "male"]
+voices = 6
+detune_cents = 7.0
+spread_s = 0.035
+donors = 2
+attack = 0.35
+release = 1.2
+lo = 36          # C2: the recordings cover 36-58; above ~63 the pitch shift starts to show
+hi = 63

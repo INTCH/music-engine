@@ -1,0 +1,84 @@
+# Sonic Pi one-shot samples. Evidence: etc/samples/README.md says every sample there was
+# donated or taken from freesound under CC0 ("placed in the public domain via the Creative
+# Commons 0 License"). The repo's root LICENSE.md is MIT but covers the code, not the samples,
+# so root docs are not fetched (root_docs = false).
+# loop_* files are NOT catalogued: loop_amen / loop_breakbeat are well-known breakbeats whose
+# CC0 upload to freesound cannot clear the original recordings.
+
+[[library]]
+id = "sonic-pi-samples"
+kind = "git"
+git = "https://github.com/sonic-pi-net/sonic-pi.git"
+commit = "7b39b6639705f801dd9d907d6c1715b8c795a376"
+license = "CC0-1.0"
+credit = "Sonic Pi sample set (CC0, from freesound and Arovane)"
+root_docs = false
+scan = "kits"
+
+[[instrument]]
+name = "sonicpi/tabla"
+library = "sonic-pi-samples"
+path = "etc/samples"
+files = "tabla_*.flac"
+rule = "kit"
+family = "drums"
+tags = ["world", "india"]
+
+[[instrument]]
+name = "sonicpi/acoustic-kit"
+library = "sonic-pi-samples"
+path = "etc/samples"
+files = "drum_*.flac"
+rule = "kit"
+family = "drums"
+
+[[instrument]]
+name = "sonicpi/electronic-hits"
+library = "sonic-pi-samples"
+path = "etc/samples"
+files = "elec_*.flac"
+rule = "kit"
+family = "drums"
+tags = ["electronic"]
+
+[[instrument]]
+name = "sonicpi/kicks"
+library = "sonic-pi-samples"
+path = "etc/samples"
+files = "bd_*.flac"
+rule = "kit"
+family = "drums"
+tags = ["electronic"]
+
+[[instrument]]
+name = "sonicpi/snares"
+library = "sonic-pi-samples"
+path = "etc/samples"
+files = "sn_*.flac"
+rule = "kit"
+family = "drums"
+
+[[instrument]]
+name = "sonicpi/hats"
+library = "sonic-pi-samples"
+path = "etc/samples"
+files = "hat_*.flac"
+rule = "kit"
+family = "drums"
+
+[[instrument]]
+name = "sonicpi/percussion"
+library = "sonic-pi-samples"
+path = "etc/samples"
+files = "perc_*.flac"
+rule = "kit"
+family = "drums"
+
+[[instrument]]
+name = "sonicpi/ambient"
+library = "sonic-pi-samples"
+path = "etc/samples"
+files = "ambi_*.flac"
+rule = "kit"
+family = "fx"
+tags = ["texture"]

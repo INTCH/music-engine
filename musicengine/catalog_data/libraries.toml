@@ -1,0 +1,48 @@
+# Hand-picked libraries. License rule: public-domain dedications only (CC0, Unlicense, explicit
+# public domain) - music made with the engine must be entirely the user's, with no attribution,
+# notice or royalty owed to anyone. `commit` pins exactly what gets downloaded.
+# scripts/build_catalog.py turns these (plus the sfzinstruments org) into catalog_data/generated/.
+#
+# Removed / excluded on purpose:
+#   Sonatina Symphonic Orchestra - Sampling Plus (no promo use), horns CC-BY-SA
+#   Salamander Grand Piano       - CC-BY 3.0 (attribution required)
+#   MuseScore_General / FluidR3  - MIT (copyright notice required)
+#   CC-BY sfzinstruments repos   - DrumGizmo kits, NakedDrums, HeadroomPiano, Ixox flute, MTG sax, dim-cabasa
+# The `credit` lines below are courtesy only; CC0 asks for nothing.
+
+[[library]]
+id = "VSCO-2-CE"
+short = "vsco"
+kind = "git"
+git = "https://github.com/sgossner/VSCO-2-CE.git"
+commit = "440300901dfe9275fd84e0b7763af1f8443ae62e"
+license = "CC0-1.0"
+credit = "VSCO 2 Community Edition - Versilian Studios (CC0). Organ sampled by Simon Dalzell / Ivy Audio."
+scan = "folders"
+
+[[library]]
+id = "VCSL"
+short = "vcsl"
+kind = "git"
+git = "https://github.com/sgossner/VCSL.git"
+commit = "c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e"
+license = "CC0-1.0"
+credit = "VCSL (Versilian Community Sample Library) - Versilian Studios (CC0)"
+scan = "folders"
+
+[[library]]
+id = "guitar-clean"
+short = "fsbs-guitar"
+kind = "git"
+git = "https://github.com/freepats/electric-guitar-FSBS-clean.git"
+commit = "192cf0d9bf2c4ba6ead8e3524ba3f78818e4fe91"
+license = "CC0-1.0"
+credit = "Electric Guitar FSBS (clean) - FreePats project (CC0)"
+scan = "sfz"
+
+[[library]]
+id = "synth"
+kind = "builtin"
+license = "Synthesized"
+credit = "Synthesized by music-engine (no third-party material)"
+scan = "none"

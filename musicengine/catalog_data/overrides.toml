@@ -1,0 +1,40 @@
+# Hand-kept settings for generated catalog entries (catalog_data/generated/*.toml is rewritten by
+# scripts/build_catalog.py, so fixes found by measuring renders live here). Each [[override]]
+# names a full instrument name; its other keys are merged into that entry, and aliases of it
+# inherit them.
+
+[[override]]
+# The p layer's bow swells in slowly: from the trimmed start it takes 40-760 ms (median ~220)
+# to reach 30% of its body level, so detached notes spoke late. Start each sample where it
+# has grown to a quarter of its body level.
+name = "vsco/strings-solo-violin-arco-vib"
+speak = 0.25
+
+[[override]]
+# amp_veltrack=40 in the map: sfizz gives only ~3 dB between velocity 0.3 and 0.9.
+# Add the engine's velocity curve on top, as the sampler applies to every other instrument.
+name = "freepats-button-accordion-hn/preset-button-accordion-hn-tuned"
+velocity_curve = true
+
+[[override]]
+# Every sample's spectral fundamental is its filename note + 12 (checked on all 18 files,
+# within 0.25 semitone). The autocorrelation detector reads only up to 2.5 kHz and
+# these notes sound at 0.8-4.2 kHz with inharmonic partials, so it agreed on 3 of 9 probes.
+name = "vcsl/idiophones-struck-idiophones-glockenspiel"
+offset = 12
+
+[[override]]
+# The clarinet notes breathe in: one note every two beats at 108 bpm reached 30% of its peak
+# a median 88 ms after the glockenspiel (up to 220), so a staccato tune dragged behind the
+# pizzicato under it (measured on a staccato clarinet-over-pizzicato loop).
+name = "vsco/woodwinds-clarinet-suslong"
+speak = 0.25
+
+[[override]]
+# Same probe: bassoon staccato +17 ms, sustain median 34 ms to a quarter of its body (p90 115).
+name = "vsco/woodwinds-bassoon-stac"
+speak = 0.25
+
+[[override]]
+name = "vsco/woodwinds-bassoon-sus"
+speak = 0.25

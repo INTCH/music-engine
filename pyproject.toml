@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "musicengine"
+version = "0.2.0"
+description = "Compose and render music in code from public-domain recordings of real instruments, built to be driven by AI coding agents"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "iefedev" }]
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "soundfile", "matplotlib"]
+keywords = ["music", "composition", "sampler", "sfz", "midi", "mastering", "cc0", "ai-agents"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "build"]
+
+[project.scripts]
+musicengine = "musicengine.__main__:run"
+
+[tool.setuptools.packages.find]
+include = ["musicengine*"]
+
+[tool.setuptools.package-data]
+"musicengine.catalog_data" = ["*.toml"]
+"musicengine.catalog_data.generated" = ["*.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+markers = ["samples: renders real instruments from the sample library (local only)"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E501", "E701", "E702", "E731", "E741"]   # the engine's compact one-line biquad/lambda/table style

@@ -1,0 +1,6 @@
+include AGENTS.md CLAUDE.md README.md LICENSE
+graft docs
+graft examples
+graft tests
+graft scripts
+global-exclude __pycache__ *.py[cod]

@@ -1,0 +1,7 @@
+#!/bin/sh
+# Lint and the fast, sample-free tests before every commit.
+# Enabled per clone with:  git config core.hooksPath .githooks
+# The sample tests (golden renders) run with:  python -m pytest -m samples
+set -e
+python -m ruff check .
+python -m pytest -q -m "not samples" -p no:cacheprovider

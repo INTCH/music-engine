@@ -1,0 +1,67 @@
+# Close-miked one-shots from recorded CC0 kits, as `catalog.kit` folders for s.hit.
+# The sfz programs of these libraries play through sfizz; these entries reach single mics
+# and articulations directly. Velocity layers are in the file names (_vl1 soft .. _vlN hard),
+# round-robins as _rrN: filter with a pattern, e.g. kit("rusty/kick", "k_vl1[2-4]_*").
+
+[[instrument]]
+name = "rusty/kick"
+library = "karoryfer.big-rusty-drums"
+path = "Samples/kick_24/kick/kick"          # 24" kick, inside mic, 14 layers x 4 rr
+files = "k_vl*.flac"
+rule = "kit"
+family = "drums"
+tags = ["recorded", "kick", "acoustic", "close"]
+
+[[instrument]]
+name = "rusty/snare"
+library = "karoryfer.big-rusty-drums"
+path = "Samples/snare_14/center/top"        # 14" snare, center hits, top mic
+files = "*.flac"
+rule = "kit"
+family = "drums"
+tags = ["recorded", "snare", "acoustic", "close"]
+
+[[instrument]]
+name = "rusty/snare-rimshot"
+library = "karoryfer.big-rusty-drums"
+path = "Samples/snare_14/rimshot/top"
+files = "*.flac"
+rule = "kit"
+family = "drums"
+tags = ["recorded", "snare", "rimshot", "acoustic", "close"]
+
+[[instrument]]
+name = "rusty/hat-closed"
+library = "karoryfer.big-rusty-drums"
+path = "Samples/hihat_14/cl/cl"             # 14" hats, closed, close mic
+files = "*.flac"
+rule = "kit"
+family = "drums"
+tags = ["recorded", "hihat", "acoustic", "close"]
+
+[[instrument]]
+name = "rusty/hat-open"
+library = "karoryfer.big-rusty-drums"
+path = "Samples/hihat_14/open/cl"
+files = "*.flac"
+rule = "kit"
+family = "drums"
+tags = ["recorded", "hihat", "acoustic", "close"]
+
+[[instrument]]
+name = "rusty/crash"
+library = "karoryfer.big-rusty-drums"
+path = "Samples/crash_17/cr/cl"             # 17" crash, close mic
+files = "*.flac"
+rule = "kit"
+family = "drums"
+tags = ["recorded", "cymbal", "crash", "acoustic"]
+
+[[instrument]]
+name = "frankensnare/claps"
+library = "karoryfer.frankensnare"
+path = "Samples/xtra_claps"                 # several people clapping together, 5 rr
+files = "clap_stack_rr*.flac"
+rule = "kit"
+family = "drums"
+tags = ["recorded", "clap", "handclap"]

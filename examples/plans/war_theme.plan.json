@@ -1,0 +1,35 @@
+{
+ "schema": "musicengine.plan/1",
+ "title": "Banners Raised",
+ "use": "loop",
+ "brief": "War theme for a relaxed medieval strategy game: driving and dramatic, but heard for long stretches, so no harsh highs and no constant cymbals. Shares the map theme's palette and motif.",
+ "global": {"bpm": 112, "beats_per_bar": 4, "key": "D", "mode": "minor", "bars": 48, "loop": true, "genre": "cinematic"},
+ "sections": [
+  {"name": "A", "function": "intro", "bars": [0, 8], "chords": ["Dm", "Bb", "C", "Dm", "Gm", "Bb", "C", "A"], "dynamic": "mp",
+   "instruments": [{"name": "celli_spic", "role": "rhythm", "stem": "ostinato"}, {"name": "basses", "role": "bass", "stem": "basses"},
+                   {"name": "drumkit", "role": "rhythm", "stem": "drums"}, {"name": "vcsl folk harp", "role": "color", "stem": "harp"}]},
+  {"name": "A'", "function": "A", "bars": [8, 16], "chords": ["Dm", "Bb", "C", "Dm", "Gm", "Bb", "C", "A"], "dynamic": "mf",
+   "instruments": [{"name": "horns", "role": "melody", "stem": "horns"}, {"name": "celli_spic", "role": "rhythm", "stem": "ostinato"},
+                   {"name": "drumkit", "role": "rhythm", "stem": "drums"}]},
+  {"name": "B", "function": "B", "bars": [16, 24], "chords": ["Bb", "F", "C", "Dm", "Bb", "F", "Gm", "A"], "dynamic": "f",
+   "instruments": [{"name": "violins", "role": "melody", "stem": "violins"}, {"name": "violins_spic", "role": "rhythm", "stem": "violins"},
+                   {"name": "celli_spic", "role": "rhythm", "stem": "ostinato"}, {"name": "drumkit", "role": "rhythm", "stem": "drums"}]},
+  {"name": "Peak", "function": "peak", "bars": [24, 32], "chords": ["Dm", "Bb", "C", "Dm", "Gm", "Bb", "C", "A"], "dynamic": "ff",
+   "instruments": [{"name": "horns", "role": "melody", "stem": "horns"}, {"name": "trombone", "role": "countermelody", "stem": "trombone"},
+                   {"name": "choir", "role": "harmony", "stem": "choir"}, {"name": "drumkit", "role": "rhythm", "stem": "drums"}]},
+  {"name": "Breakdown", "function": "breakdown", "bars": [32, 40], "chords": ["Dm", "Bb", "C", "Dm", "Gm", "Bb", "C", "A"], "dynamic": "p",
+   "instruments": [{"name": "celli_spic", "role": "rhythm", "stem": "ostinato"}, {"name": "cithara-barbarica", "role": "melody", "stem": "motif"},
+                   {"name": "baroque alto recorder", "role": "melody", "stem": "motif"}]},
+  {"name": "Build", "function": "build", "bars": [40, 48], "chords": ["Dm", "Bb", "C", "Dm", "Gm", "Bb", "C", "A"], "dynamic": "mf",
+   "instruments": [{"name": "celli_spic", "role": "rhythm", "stem": "ostinato"}, {"name": "horns", "role": "harmony", "stem": "horns"},
+                   {"name": "drumkit", "role": "rhythm", "stem": "drums"}]}
+ ],
+ "motif": {"notes": [[69, 1.5], [70, 0.5], [72, 1.0], [74, 1.0]], "description": "the map theme's A B C D, now in minor (A Bb C D)"},
+ "mix": {"stems": {"drums": {"level_db": -20, "role": "drums"}, "ostinato": {"level_db": -21}, "horns": {"level_db": -20},
+                   "violins": {"level_db": -23}, "basses": {"level_db": -22, "role": "bass"}, "choir": {"level_db": -27}}},
+ "rationale": [
+  {"decision": "D minor, i-VI-VII-i with A major as dominant", "why": "dramatic minor with a leading tone keeps forward pull without menace", "source": "docs/agents/brief.md#mood-to-music (Epic, heroic)"},
+  {"decision": "112 bpm, celli spiccato 8th ostinato", "why": "drive comes from the ostinato, not from cymbals, so it stays listenable for long wars", "source": "docs/agents/composition.md#rhythm-and-groove"},
+  {"decision": "breakdown quotes the motif on cithara and recorder", "why": "ties the war theme to the map theme (matching set)", "source": "docs/agents/composition.md#game-music-specifics"}
+ ]
+}

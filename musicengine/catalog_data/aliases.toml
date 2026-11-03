@@ -1,0 +1,188 @@
+# Short names for the instruments used most, with playing envelopes that worked in practice.
+# `instrument` is a full catalog name; other keys override it.
+# Kits (unpitched one-shots) are used with catalog.kit(name, "file*pattern").
+
+# --- strings (VSCO 2 CE) ---
+[[alias]]
+name = "violins"
+instrument = "vsco/strings-violin-section-susvib"
+attack = 0.25
+release = 0.9
+[[alias]]
+name = "violas"
+instrument = "vsco/strings-viola-section-susvib"
+attack = 0.25
+release = 0.9
+[[alias]]
+name = "celli"
+instrument = "vsco/strings-cello-section-susvib"
+attack = 0.25
+release = 0.9
+[[alias]]
+name = "basses"
+instrument = "vsco/strings-solo-contrabass-susnv"
+attack = 0.3
+release = 0.9
+[[alias]]
+name = "violins_trem"
+instrument = "vsco/strings-violin-section-trem"
+attack = 0.1
+release = 0.6
+[[alias]]
+name = "celli_trem"
+instrument = "vsco/strings-cello-section-trem"
+attack = 0.1
+release = 0.6
+[[alias]]
+name = "violins_spic"
+instrument = "vsco/strings-violin-section-spic"
+sustain = false
+release = 0.15
+[[alias]]
+name = "celli_spic"
+instrument = "vsco/strings-cello-section-spic"
+sustain = false
+release = 0.15
+[[alias]]
+name = "celli_pizz"
+instrument = "vsco/strings-cello-section-pizzt"
+sustain = false
+release = 0.3
+[[alias]]
+name = "solo_violin"
+instrument = "vsco/strings-solo-violin-arco-vib"
+attack = 0.03        # was 0.15: that fade alone put notes 50-75 ms late; the slow bow start is now trimmed (speak, overrides.toml)
+release = 0.7
+[[alias]]
+name = "harp"
+instrument = "vsco/strings-harp"
+sustain = false
+release = 1.5
+
+# --- winds / brass (VSCO 2 CE) ---
+[[alias]]
+name = "flute"
+instrument = "vsco/woodwinds-flute-susvib"
+attack = 0.12
+release = 0.5
+[[alias]]
+name = "clarinet"
+instrument = "vsco/woodwinds-clarinet-suslong"
+attack = 0.03        # was 0.1: with the breath-in trimmed (speak, overrides.toml) the fade alone kept notes ~45 ms late
+release = 0.5
+[[alias]]
+name = "oboe"
+instrument = "vsco/woodwinds-oboe-vib"
+attack = 0.1
+release = 0.5
+[[alias]]
+name = "horns"
+instrument = "vsco/brass-f-horn-sus"
+attack = 0.18
+release = 0.8
+[[alias]]
+name = "trombone"
+instrument = "vsco/brass-tenor-trombone-sus"
+attack = 0.12
+release = 0.7
+[[alias]]
+name = "tuba"
+instrument = "vsco/brass-tuba-sus"
+attack = 0.15
+release = 0.8
+[[alias]]
+name = "trumpet"
+instrument = "vsco/brass-trumpet-sus"
+attack = 0.08
+release = 0.6
+
+# --- keys / organ ---
+[[alias]]
+name = "organ_loud"
+instrument = "vsco/keys-organ-loud"
+include = "Rode_Man3Open_*"
+offset = 35          # verified by chroma analysis of rendered tracks (97%); the detector reads 23 (octave error)
+attack = 0.06
+release = 1.2
+[[alias]]
+name = "organ_pedal"
+instrument = "vsco/keys-organ-loud"
+include = "Rode_Pedal_*"
+offset = 23
+attack = 0.08
+release = 1.5
+[[alias]]
+name = "organ_quiet"
+instrument = "vsco/keys-organ-quiet"
+include = "NT5_Man3Quiet_*"
+offset = -86
+attack = 0.08
+release = 1.2
+[[alias]]
+name = "organ_flute4"
+instrument = "vcsl/aerophones-edge-blown-aerophones-renaissance-organ-4"
+attack = 0.05
+release = 1.0
+[[alias]]
+name = "organ_8"
+instrument = "vcsl/aerophones-edge-blown-aerophones-renaissance-organ-8"
+attack = 0.05
+release = 1.0
+[[alias]]
+name = "piano"
+instrument = "vcsl/chordophones-zithers-grand-piano-steinway-b-sus"     # CC0 Steinway B
+sustain = false
+release = 0.35
+
+# --- mallets / plucked ---
+[[alias]]
+name = "vibes"
+instrument = "vcsl/idiophones-struck-idiophones-vibraphone-soft-mallets"
+sustain = false
+release = 1.2
+[[alias]]
+name = "vibes_bowed"
+instrument = "vcsl/idiophones-struck-idiophones-vibraphone-bowed"
+attack = 0.4
+release = 1.5
+[[alias]]
+name = "marimba"
+instrument = "vsco/percussion-marimba"
+sustain = false
+release = 0.8
+[[alias]]
+name = "glock"
+instrument = "vsco/percussion-glock"
+sustain = false
+release = 1.5
+[[alias]]
+name = "guitar_clean"
+instrument = "fsbs-guitar/eguitarfsbs-clean-bridge-20260807"
+sustain = false
+release = 0.6
+
+# --- drums (GM key layout: 36 kick, 38 snare, 42/46 hats, 49 crash, 51 ride, 45/47/48 toms) ---
+[[alias]]
+name = "drumkit"
+instrument = "karoryfer-big-rusty-drums/01-full"     # real acoustic kit, CC0, rendered through sfizz
+sustain = false
+[[alias]]
+name = "world_perc"
+instrument = "freepats-world-percussion/worldpercussion-20200905"   # 48-50 cajon, 51-53 bongo, 54-56 shaker,
+sustain = false                                                    # 57-58 tamb, 67-68 maracas, 69 doum 70 tak 71 pa
+
+# --- voices: no CC0 multisampled choir exists, so the choir is one recorded male singer
+# stacked into a section (catalog_data/ensembles.toml). Range 36-63, "a" vowel only. ---
+[[alias]]
+name = "choir"
+instrument = "choir_male"
+[[alias]]
+name = "voice"
+instrument = "legato-vocal-tutorial/01-no-legato-polyphonic-only-no-vibrato-a"
+attack = 0.3
+release = 1.0
+# the formant synth, refused unless the Score allows synths
+[[alias]]
+name = "voice_ooh"
+instrument = "synth/voice-solo-ooh"
+release = 1.8
